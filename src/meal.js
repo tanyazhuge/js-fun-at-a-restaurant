@@ -10,31 +10,30 @@ function createMenuItem(itemName, itemPrice, itemType) {
     price: itemPrice,
     type: itemType,
   }
-return menuItem
+  return menuItem
 };
 
 
-var ingredients = [];
-function addIngredients(topping,ingredients){
-  if (ingredients.includes(topping) === false){
+function addIngredients(topping, ingredients) {
+  if (ingredients.includes(topping) === false) {
     ingredients.push(topping);
   }
   return ingredients
 };
 
 
-function formatPrice(price){
+function formatPrice(price) {
   return `$${price}`;
 };
 
 
-function decreasePrice(price){
+function decreasePrice(price) {
   var discountPrice = price * 0.9;
   return discountPrice;
 };
 
 
-function createRecipe(title, toppings, itemType){
+function createRecipe(title, toppings, itemType) {
   var recipe = {
     title: title,
     ingredients: toppings,
